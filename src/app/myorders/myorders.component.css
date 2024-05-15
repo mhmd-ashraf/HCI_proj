@@ -1,0 +1,25 @@
+.wish-list {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to new row when there's no more space */
+    /* Distribute items evenly with space between them */
+    justify-content: calc(100px); 
+    /* justify-content:; */
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: absolute;
+    width: calc(83% - 10px);
+    top: 26%;
+    left: 15%;
+    height: auto;
+}
+
+.flex-item {
+    width: calc(33.33% - 10px);/* 33.33% width for each item with gap of 10px */
+    /* background-color: #ccc; */
+    padding: 20px;
+    /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
+    /* Gap between grid items */
+    margin-bottom: 0px 0px 10px 10px ; 
+    height: 1%;
+}

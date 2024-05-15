@@ -1,0 +1,46 @@
+<!-- <mat-toolbar color="primary" class="navbar">
+  <button mat-button routerLink="/" routerLinkActive="active" class="nav-button">Home</button>
+  <button mat-button routerLink="/about" routerLinkActive="active" class="nav-button">About</button>
+  <button mat-button routerLink="/products" routerLinkActive="active" class="nav-button">Products</button>
+  <button mat-button routerLink="/contact" routerLinkActive="active" class="nav-button">Contact</button>
+</mat-toolbar>
+ -->
+
+
+<!-- navbar.component.html -->
+<mat-toolbar color="primary" class="navbar">
+  <div class="left-side">
+    <button mat-icon-button routerLink="/">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/notification">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/profile">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/wishlist">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/post">
+      <mat-icon>post_add</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/myorders">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+    <a routerLink="/contactus" style="color: aliceblue;">Contact Us</a>
+  </div>
+  <div class="right-side">
+    <mat-form-field appearance="fill" class="search-bar">
+      <mat-label>Search</mat-label>
+      <input matInput>
+      <button mat-button matSuffix>
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-icon-button routerLink="/messenger">
+      <mat-icon>message</mat-icon>
+    </button>
+    <a (click)="logout()" href="login" style="color: aliceblue;"><button mat-button class="logout-button">Logout</button></a>
+  </div>
+</mat-toolbar>

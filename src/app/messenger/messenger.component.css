@@ -1,0 +1,80 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+margin-bottom: 10px;
+}
+
+.message-content {
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+.message-content div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-sender {
+    font-weight: bold;
+}
+
+.sent .message-content {
+    background-color: #DCF8C6; /* Example background color for sent messages */
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+textarea {
+    flex: 1;
+    resize: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #007BFF; /* Example button color */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Example button color on hover */
+}
+
+/*
+    to be know 
+    i create 2 classes 
+    first class Message and that containes sender, text and timestamp
+    second class conversation and that containes conversationid and Array of Messages
+    
+
+    reWrite 
+    1- create serviec with all methods to treat with firebase
+    2- html file
+    3- css file
+    4 ts file
+    
+
+*/

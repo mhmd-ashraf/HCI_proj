@@ -1,0 +1,16 @@
+
+button {
+    width: 100%;
+}
+/* contact-form.component.css */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-card {
+  width: 400px;
+  padding: 20px;
+}

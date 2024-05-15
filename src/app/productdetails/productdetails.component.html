@@ -1,0 +1,68 @@
+<!-- <app-search-bar></app-search-bar> -->
+<app-navbar></app-navbar>
+<app-topnavbar></app-topnavbar>
+
+<title>Product Details Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="flex-box">
+    <div class="left">
+        <div class="pic">
+            <div class="images">
+                <!-- Image placeholders -->
+                <img src="{{product?.image}}" alt="">
+            </div>
+            <div class="big-img">
+                <!-- Image placeholders -->
+            </div>
+        </div>
+        <div class="description">
+            <p><strong>Description</strong></p>
+            <p>{{ product?.description }}</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="pname">{{ product?.name }}</div>
+        <p><strong>{{ product?.loc }}</strong></p>
+        <p><strong>1st Owner</strong></p>
+        <div class="price"><strong>{{ product?.price }} LE </strong></div>
+
+        <div class="btn-box">
+            <button class="cart-btn" (click)="addToWishList()">Add to wish list</button>
+            <button class="buy-btn" (click)="buyPorduct()">Buy Now</button>
+        </div>
+
+        <div class="seller">
+            <p class="seller-title">Seller</p>
+            <div style="padding: 10px;">
+                <h3>{{ product?.sellerEmail }}</h3>
+                <div class="ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>1.6K Reviews</span>
+                </div>
+
+                <div class="seller-cont-box">
+                    <button class="cont" (click)="navigateToChat()">Contact</button>
+                    <!-- <button class="view">Profile</button> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback section -->
+        <div class="feedback">
+            <p class="feedback-title">Send Feedback</p>
+            <textarea [(ngModel)]="feedbackText" placeholder="Write your feedback here..."></textarea>
+            <button class="feedback-btn" (click)="sendFeedback()">Send Feedback</button>
+        </div>
+
+        <!-- Display feedback messages -->
+        <div class="feedback-messages">
+            <p *ngFor="let feedback of feedbacks">{{ feedback }}</p>
+        </div>
+    </div>
+</div>

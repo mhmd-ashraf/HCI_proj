@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 30%;
+  height: 10vh; /* Adjust as needed */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  position: relative;
+}
+input[type="text"] {
+  padding: 10px 30px 10px 10px; /* Adjust padding to make room for the icon */
+  width: 600px; /* Adjust as needed */
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #007bff; /* Adjust icon color as needed */
+}
+
+.search-icon:hover {
+  color: #0056b3; /* Adjust icon color on hover as needed */
+}

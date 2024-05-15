@@ -1,0 +1,54 @@
+<app-topnavbar></app-topnavbar>
+
+<app-navbar></app-navbar>
+<div class="form-container">
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" id="task" placeholder="Enter task name" [(ngModel)]="product.name" name="task-name" required>
+      </div>
+
+      <div class="input-group">
+        <input type="text" class="form-control" id="category" placeholder="Enter task category name" [(ngModel)]="product.category" name="task-name" required>
+      </div>
+
+      <div class="input-group">
+        <textarea class="form-control" id="description" rows="4" placeholder="Enter description" [(ngModel)]="product.description" name="task-description" required></textarea>
+      </div>
+
+      <div class="input-group">
+        <input type="date" class="form-input" id="task" placeholder="Enter task" [(ngModel)]="product.since" name="date" required />
+      </div>
+
+      <div class="input-group">
+        <input type="text" class="form-control" id="setprice" placeholder="Enter set price" [(ngModel)]="product.price" name="task-setprice" required>
+      </div>
+
+      <div class="input-group">
+        <input type="text" class="form-control" id="location" placeholder="Enter location" [(ngModel)]="product.loc" name="task-location" required>
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control" id="image" placeholder="Enter Image Url" [(ngModel)]="product.image" name="task-location" required>
+      </div>
+
+      <!-- <div class="input-group">
+        Drag and drop area
+        <div id="drag-drop-area" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" class="drag-drop-area">
+          <p>Drag & drop files here, or click to select them.</p>
+          <input type="file" (change)="onFileSelected($event)" accept="image/*" multiple style="display: none;" #fileInput>
+          <button class="upload-button" (click)="fileInput.click()">Select Files</button>
+        </div>
+      </div> -->
+
+
+       <!-- Display uploaded file list -->
+      <!-- <div class="uploaded-files">
+        <ul>
+          <li *ngFor="let image of product.image; index as i">{{ image }}</li>
+        </ul>
+      </div> -->
+
+      <div class="input-group">
+        <button class="submit-button" (click)="addItem()">Add Item</button>
+      </div>
+    </div>
+  </div>

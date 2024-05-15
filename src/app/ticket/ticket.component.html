@@ -1,0 +1,18 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<div class="ticket">
+    <div class="ticket-head">
+        <div class="pict">
+            <img src="{{productimage}}" alt="">
+            <i class="{{ order ? 'fas fa-times': 'fas fa-heart' }}" [style.color]="isLiked ? 'red' : 'black'" (click)="toggleLike()"></i>        </div>
+    </div>
+    <div class="ticket-footer">
+        <div class="info">
+            <a (click)="clickOnLinkToViewDetails()"><p>{{productname}}</p></a>
+            <p>{{productprice}} LE</p>
+        </div>
+        <div class="loc-since">
+            <p>{{location}}</p>
+            <p>{{since}}</p>
+        </div>
+    </div>
+</div>

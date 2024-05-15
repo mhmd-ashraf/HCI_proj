@@ -1,0 +1,21 @@
+<app-topnavbar></app-topnavbar>
+
+<div class="chat-container">
+    <div class="chat-messages">
+      <div *ngFor="let message of conversation.messages" class="message" [ngClass]="{'sent': message.sender === currentUser}">
+        <div class="message-content">
+            <div>
+                <span class="message-sender">{{ message.sender }}</span>
+                <span class="message-timestamp">{{ parseDate(message.timestamp ? message.timestamp: "") | date:'mediumTime' }}</span>
+            </div>
+            <div>
+                <span class="message-text">{{message.text }}</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <textarea [(ngModel)]="newMessage" placeholder="Type your message..." (keydown.enter)="sendMessage()"></textarea>
+      <button (click)="sendMessage()">Send</button>
+    </div>
+</div>

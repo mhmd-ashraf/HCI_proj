@@ -1,0 +1,145 @@
+.div-one{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+.global{
+    /* padding: 10%; */
+    position: fixed;
+    height: fit-content;
+    /* background-color: greenyellow; */
+    width: calc(75%);
+    top: 15%;
+    left: 15%;
+}
+.fone{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    border-radius: 50%;
+}
+.info{
+    margin-left: 1%;
+}
+.boxes{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* width: auto; */
+    /* height: 40px; */
+}
+.box{
+    text-align: center;
+    align-items: center;
+    border: 1px black solid;
+    background-color: green;
+    color: white;
+    width: calc(100% - 90%);
+    border-radius: 10px;
+    line-height: .2;
+    /* height: min-content; */
+}
+.followers{
+    margin-left: 2%;
+}
+.products{
+    margin-left: -1%;
+}
+
+.contact-details{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.key{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.val{
+    font-size: 20px;
+}
+/*
+.myposted{
+    margin-top: 100%;
+    top: 100%;
+
+} */
+
+.global {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  margin-right: 20px;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+}
+
+.ratings mat-icon {
+  font-size: 20px;
+  color: #ffd700;
+  /* Gold color for stars */
+}
+
+.member-since {
+  margin-top: 10px;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.box {
+  width: calc(50% - 10px);
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.field {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.key {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.val {
+  margin: 0;
+}

@@ -1,0 +1,23 @@
+<app-topnavbar></app-topnavbar>
+
+<div class="wish-list">
+
+    <div class=".flex-item" *ngFor="let product of products; index as i">
+        <app-ticket class="flex-item"
+        [productname]="product.name"
+        [id]="product.id"
+        [productimage]="func(i)"
+        [productprice]="product.price"
+        [location]="product.loc"
+        [since]="product.since"
+        [category]="product.category"
+        [producdescription]="product.description"
+        [sellerEmail]="product.sellerEmail"
+        [wisherEmail]="product.wisherEmail"
+        [order]="true"
+        [isLiked]="true"
+        >
+        </app-ticket>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+/* Style for the button */
+.styled-button {
+    padding: 10px 30px;
+    background-color: #4c4caf; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 50px; /* Adjust this margin to keep it away from the edges */
+}
+
+/* Style for the container */
+.container {
+    padding: 0px;
+    display: inline-block;
+}

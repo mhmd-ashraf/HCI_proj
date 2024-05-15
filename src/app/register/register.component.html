@@ -1,0 +1,93 @@
+<!-- <div class="container">
+  <h2>Welcome! Let's Get You Started</h2>
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="form">
+    <div>
+      <input type="text" id="fullName" name="fullName" [(ngModel)]="fullName" placeholder="Full Name" required>
+      <div *ngIf="registerForm.submitted && registerForm.controls['fullName'].invalid" class="error-message">
+        *You must enter your full name.*
+      </div>
+    </div>
+    <div>
+      <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Email Address" required>
+      <div *ngIf="registerForm.submitted && registerForm.controls['email'].invalid" class="error-message">
+        *You must enter your email address.*
+      </div>
+    </div>
+    <div>
+      <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Create Password" required>
+      <div *ngIf="registerForm.submitted && registerForm.controls['password'].invalid" class="error-message">
+        *Password is required.*
+      </div>
+      <div *ngIf="registerForm.controls['password'].valid && isWeakPassword(password)" class="error-message">
+        Password is too weak.
+      </div>
+      <div *ngIf="registerForm.controls['password'].valid && !isWeakPassword(password)" class="password-strength">
+        *Password strength: Strong.*
+      </div>
+    </div>
+    <div>
+      <input type="checkbox" id="termsAndConditions" name="termsAndConditions" [(ngModel)]="termsAndConditions" required>
+      <label for="termsAndConditions">I agree to Terms & Conditions</label>
+      <div *ngIf="registerForm.submitted && registerForm.controls['termsAndConditions'].invalid" class="error-message">
+        *Please agree to the Terms & Conditions.*
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="signUpButton">Sign Up</button>
+    </div>
+    <div class="alreadyCustomer">
+      <span>Already a customer? <a href="login">Login</a></span>
+    </div>
+
+  </form>
+  </div> -->
+
+
+  <div class="container">
+    <h2>Welcome! to our website</h2>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput type="text" id="fullName" name="fullName" [(ngModel)]="fullName" placeholder="Full Name" required>
+        <mat-error *ngIf="registerForm.submitted && registerForm.controls['fullName'].invalid">
+          *You must enter your full name.*
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email Address</mat-label>
+        <input matInput type="email" id="email" name="email" [(ngModel)]="email" placeholder="Email Address" required>
+        <mat-error *ngIf="registerForm.submitted && registerForm.controls['email'].invalid">
+          *You must enter your email address.*
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Create Password</mat-label>
+        <input matInput type="password" id="password" name="password" [(ngModel)]="password" placeholder="Create Password"
+          required>
+        <mat-error *ngIf="registerForm.submitted && registerForm.controls['password'].invalid">
+          *Password is required.*
+        </mat-error>
+        <div *ngIf="registerForm.controls['password'].valid && isWeakPassword(password)" class="error-message">
+          Password is too weak.
+        </div>
+        <div *ngIf="registerForm.controls['password'].valid && !isWeakPassword(password)" class="password-strength">
+          *Password strength: Strong.*
+        </div>
+      </mat-form-field>
+
+      <mat-checkbox [(ngModel)]="termsAndConditions" name="termsAndConditions" required>
+        I agree to Terms & Conditions
+      </mat-checkbox>
+      <mat-error *ngIf="registerForm.submitted && registerForm.controls['termsAndConditions'].invalid">
+        *Please agree to the Terms & Conditions.*
+      </mat-error>
+
+      <button mat-raised-button type="submit" class="signUpButton" color="primary">Sign Up</button>
+
+      <div class="alreadyCustomer">
+        <span>Already a customer? <a href="login">Login</a></span>
+      </div>
+    </form>
+  </div>

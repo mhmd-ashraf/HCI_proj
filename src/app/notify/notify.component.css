@@ -1,0 +1,16 @@
+User
+/* Style for the container */
+.container {   
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; /* Make it round */
+}
+
+/* Style for the bell icon */
+.container i {
+    font-size: 25px; /* Adjust the size of the icon */
+    color: #4c4caf; /* Blue */
+}

@@ -1,54 +1,50 @@
 <app-topnavbar></app-topnavbar>
 
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <div class="form-container">
-    <div class="form-group">
-      <div class="input-group">
-        <input type="text" class="form-control" id="task" placeholder="Enter task name" [(ngModel)]="product.name" name="task-name" required>
-      </div>
+  <form class="form-group">
+    <mat-form-field class="full-width">
+      <mat-label>Task Name</mat-label>
+      <input matInput placeholder="Enter task name" [(ngModel)]="product.name" name="task-name" required>
+    </mat-form-field>
 
-      <div class="input-group">
-        <input type="text" class="form-control" id="category" placeholder="Enter task category name" [(ngModel)]="product.category" name="task-name" required>
-      </div>
+    <mat-form-field class="full-width">
+      <mat-label>Task Category</mat-label>
+      <input matInput placeholder="Enter task category name" [(ngModel)]="product.category" name="task-category"
+        required>
+    </mat-form-field>
 
-      <div class="input-group">
-        <textarea class="form-control" id="description" rows="4" placeholder="Enter description" [(ngModel)]="product.description" name="task-description" required></textarea>
-      </div>
+    <mat-form-field class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="Enter description" [(ngModel)]="product.description" name="task-description"
+        required></textarea>
+    </mat-form-field>
 
-      <div class="input-group">
-        <input type="date" class="form-input" id="task" placeholder="Enter task" [(ngModel)]="product.since" name="date" required />
-      </div>
+    <mat-form-field class="full-width">
+      <mat-label>Since</mat-label>
+      <input matInput placeholder="Enter date" [(ngModel)]="product.since" name="date"
+        required>
+    </mat-form-field>
 
-      <div class="input-group">
-        <input type="text" class="form-control" id="setprice" placeholder="Enter set price" [(ngModel)]="product.price" name="task-setprice" required>
-      </div>
+    <mat-form-field class="full-width">
+      <mat-label>Set Price</mat-label>
+      <input matInput placeholder="Enter set price" [(ngModel)]="product.price" name="task-setprice" required>
+    </mat-form-field>
 
-      <div class="input-group">
-        <input type="text" class="form-control" id="location" placeholder="Enter location" [(ngModel)]="product.loc" name="task-location" required>
-      </div>
-      <div class="input-group">
-        <input type="text" class="form-control" id="image" placeholder="Enter Image Url" [(ngModel)]="product.image" name="task-location" required>
-      </div>
+    <mat-form-field class="full-width">
+      <mat-label>Location</mat-label>
+      <input matInput placeholder="Enter location" [(ngModel)]="product.loc" name="task-location" required>
+    </mat-form-field>
 
-      <!-- <div class="input-group">
-        Drag and drop area
-        <div id="drag-drop-area" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" class="drag-drop-area">
-          <p>Drag & drop files here, or click to select them.</p>
-          <input type="file" (change)="onFileSelected($event)" accept="image/*" multiple style="display: none;" #fileInput>
-          <button class="upload-button" (click)="fileInput.click()">Select Files</button>
-        </div>
-      </div> -->
+    <mat-form-field class="full-width">
+      <mat-label>Image URL</mat-label>
+      <input matInput placeholder="Enter Image URL" [(ngModel)]="product.image" name="task-image" required>
+    </mat-form-field>
 
-
-       <!-- Display uploaded file list -->
-      <!-- <div class="uploaded-files">
-        <ul>
-          <li *ngFor="let image of product.image; index as i">{{ image }}</li>
-        </ul>
-      </div> -->
-
-      <div class="input-group">
-        <button class="submit-button" (click)="addItem()">Add Item</button>
-      </div>
+    <div class="input-group">
+      <button mat-raised-button color="primary" (click)="addItem()">Add Item</button>
     </div>
-  </div>
+  </form>
+</div>
+
+

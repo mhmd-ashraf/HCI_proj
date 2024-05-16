@@ -9,7 +9,7 @@ import { ProductsService } from '../services/products.service';
   styleUrl: './myorders.component.css'
 })
 export class MyordersComponent {
-  
+
   products: Product[] = [];
   productsSubscription: Subscription | undefined;
 
@@ -30,13 +30,17 @@ export class MyordersComponent {
     );
 
     console.log("this.productsSubscription");
-   
+
   }
 
-  
+
 
   ngOnDestroy () {
     this.productsSubscription?.unsubscribe();
+  }
+
+  deleteProduct(index: number) {
+    this.products.splice(index, 1);
   }
 
   func(i : number): string{

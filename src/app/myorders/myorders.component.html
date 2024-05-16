@@ -1,6 +1,6 @@
 <app-topnavbar></app-topnavbar>
 
-<div class="wish-list">
+<!-- <div class="wish-list">
 
     <div class=".flex-item" *ngFor="let product of products; index as i">
         <app-ticket class="flex-item"
@@ -20,4 +20,24 @@
         </app-ticket>
     </div>
 
-</div>
+</div> -->
+
+
+<body>
+  <div class="product-list">
+    <div class="product-card" *ngFor="let product of products; index as i">
+      <img src="{{product.image}}" alt="Herschel backpack in dark blue">
+      <div class="product-info">
+        <span class="category">{{product.category}}</span>
+        <h2 class="product-title">{{product.name}} </h2>
+        <p>{{product.description}}</p>
+        <p class="price">{{product.price}}</p>
+        <div class="buttons">
+          <button class="add-to-cart" (click)="deleteProduct(i)">delete</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <app-footer></app-footer>
+</body>

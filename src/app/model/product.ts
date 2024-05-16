@@ -1,17 +1,17 @@
 
 
 export class Product {
-  id: string = "";
-  name: string;
-  price: number;
-  description: string;
-  loc: string;
-  since: string;
-  image: string = "";
-  sellerEmail: string = "";
-  wisherEmail: string = "";
-  buyerEmail: string = "";
-  category: string = "";
+  id: string = "";//yes
+  name: string;//yes title
+  price: number;//
+  description: string;//
+  loc: string;//
+  since: string;//
+  image: string = "";//
+  sellerEmail: string = "";//
+  wisherEmail: string = "";//
+  buyerEmail: string = "";//
+  category: string = "";//
 
 
   constructor(name: string, price: number, description: string, loc: string) {
